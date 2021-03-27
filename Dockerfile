@@ -1,6 +1,7 @@
-FROM alpine
+FROM debian 
 
-RUN apk add --update --no-cache \
+RUN apt update && apt install -y \
+    libi2c-dev \
     cmake \
     make \
     g++ \
